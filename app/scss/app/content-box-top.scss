@@ -1,0 +1,115 @@
+.content-box-top {
+    width: 100%;
+    margin: 0 0 80px;
+    overflow: hidden;
+    position: relative;
+    .link-box {
+        position: absolute;
+        top: 0;
+        height: 370px;
+        overflow: hidden;
+        max-width: 370px;
+        width: 100%;
+        @include response(1809) {
+            max-width: 315px;
+        }
+        @include response(1711) {
+            max-width: 267px;
+        }
+        @include response(1607) {
+            max-width: 214px;
+        }
+        @include response(1538) {
+            max-width: 179px;
+        }
+        @include response(1489) {
+            max-width: 155px;
+        }
+        @include response(1467) {
+            max-width: 144px;
+        }
+        @include response(1422) {
+            max-width: 122px;
+        }
+        @include response(1411) {
+            display: none;
+        }
+        a {
+            display: block;
+            height: 100%;
+            .link-image {
+                position: relative;
+                z-index: -1;
+                text-align: center;
+                img {
+                    display: inline-block;
+                    max-height: 100%;
+                    width: auto;
+                }
+            }
+            .text-holder {
+                padding: 0 20px;
+                @include response(1538) {
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+                @include response(1489) {
+                    padding: 0 10px;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+    .discount-box {
+        display: inline-block;
+        font-size: 22px;
+        line-height: 22px;
+        height: 36px;
+        font-weight: 700;
+        padding: 8px 10px 8px 20px;
+        color: #fff;
+        position: relative;
+        transition: .5s;
+        margin: 0 0 15px;
+    }
+    .link-text {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        display: block;
+        text-transform: uppercase;
+        color: #333;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+.link-box.link-holder {
+    left: 0;
+    text-decoration: none;
+    text-align: left;
+    box-shadow: inset -27px 7px 69px 14px rgba(255,255,255,1);
+    img {
+        float: left;
+    }
+    .link-text {
+        text-align: left;
+    }
+    .discount-box {
+        @extend %icon-discount-box_bg;
+    }
+}
+.link-box.holder-link {
+    right: 0;
+    text-decoration: none;
+    text-align: right;
+    box-shadow: inset 27px 7px 69px 14px rgba(255,255,255,1);
+    img {
+        float: right;
+    }
+    .link-text {
+        text-align: right;
+    }
+    .discount-box {
+        @extend %icon-discount-box_bg_r;
+    }
+}

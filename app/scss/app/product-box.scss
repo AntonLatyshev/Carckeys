@@ -1,0 +1,187 @@
+.product-box {
+    outline: none;
+    display: inline-block;
+    text-align: center;
+    width: 295px;
+    height: 400px;
+    box-sizing: border-box;
+    border: solid #e5e5e5;
+    border-width: 1px 1px 1px 0;
+    padding: 35px 0 0;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 0;
+    position: relative;
+    @include response(567) {
+        border-width: 1px 1px 1px 1px;
+    }
+    &::after {
+        content: "";
+        display: none;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #f6d334;
+    }
+    &:hover {
+        &::after {
+            display: block;
+        }
+    }
+    a {
+        display: block;
+    }
+    .product-name {
+        padding: 0 15px;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+        height: 50px;
+        overflow: hidden;
+        color: #333;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 0 15px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .product-article {
+        font-size: 14px;
+        line-height: 16px;
+        height: 32px;
+        overflow: hidden;
+        color: #333;
+        font-weight: 700;
+        text-align: center;
+        span {
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 400;
+            color: #999;
+            margin: 0 5px 0 0;
+        }
+    }
+    .product-img {
+        position: relative;
+        text-align: center;
+        height: 125px;
+        margin: 0 auto 20px;
+        .icon-box {
+            position: absolute;
+            left: 47px;
+        }
+        span {
+            height: 26px;
+            line-height: 26px;
+            width: 71px;
+            color: #fff;
+            text-align: left;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            display: block;
+            margin: 0 0 5px;
+        }
+        .new-icon {
+            @extend %icon-new-icon_bg;
+            padding: 0 0 0 10px;
+        }
+        .top-icon {
+            @extend %icon-top-icon_bg;
+            padding: 0 0 0 20px;
+        }
+        .stok-icon {
+            @extend %icon-stok-icon_bg;
+            padding: 0 0 0 15px;
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .price-box {
+        text-align: center;
+        height: 44px;
+        line-height: 44px;
+        margin: 0 0 20px;
+        .price {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 16px;
+            vertical-align: middle;
+            font-weight: 700;
+            color: #000;
+        }
+        .price-old {
+            display: block;
+            font-size: 14px;
+            line-height: 14px;
+            vertical-align: top;
+            color: #333;
+            font-weight: 700;
+            position: relative;
+            margin: 0 0 10px;
+            &::after {
+                content: "";
+                display: block;
+                width: 90px;
+                height: 1px;
+                background: #333;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: 0 0 0 -45px;
+            }
+        }
+        .price-topical {
+            display: block;
+            font-size: 16px;
+            line-height: 16px;
+            vertical-align: bottom;
+            font-weight: 700;
+            color: #e24040;
+        }
+    }
+    .product-buy-btn {
+        display: inline-block;
+        cursor: pointer;
+        text-transform: uppercase;
+        border: 1px solid #f6d334;
+        height: 36px;
+        border-radius: 36px;
+        line-height: 36px;
+        color: #333;
+        font-size: 13px;
+        font-weight: 700;
+        background: #f6d334;
+        padding: 0 10px 0 40px;
+        em {
+            display: inline-block;
+            vertical-align: middle;
+            margin: -3px 0 0 24px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #000;
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -4px 0 0 -1px;
+                @extend %icon-read-more_arrow;
+            }
+        }
+        &:hover {
+            background: #f7db5c;
+            border-color: #f7db5c;
+        }
+    }
+}
